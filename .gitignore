@@ -2,6 +2,7 @@
 .vitepress/dist
 .nuxt
 .data
+.output
 node_modules
 dist
 dist-ssr
