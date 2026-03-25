@@ -6,6 +6,9 @@ export default defineNuxtConfig({
     app: {
         baseURL: baseURL,
     },
+    image: {
+        provider: 'none'
+    },
     nitro: {
         prerender: {
             crawlLinks: true,
