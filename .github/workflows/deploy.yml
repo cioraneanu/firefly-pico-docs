@@ -23,6 +23,8 @@ jobs:
 
       - name: Generate static site
         run: npm run build
+        env:
+          NUXT_APP_BASE_URL: /firefly-pico-docs/
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4

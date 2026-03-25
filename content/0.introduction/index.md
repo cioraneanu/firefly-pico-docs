@@ -22,7 +22,7 @@ Several [bad] ideas later, I've come to this version: **A transaction assistant*
 [//]: # (<video src="/video/assistant.mp4" autoplay loop muted playsinline controls="false" style="width: 300px; border-radius: 8px;" />)
 
 
-<img src="/video/assistant.gif" style="width: 300px"/>
+![Assistant](/video/assistant.gif){style="width: 300px"}
 
 
 ### The Assistant in Action
