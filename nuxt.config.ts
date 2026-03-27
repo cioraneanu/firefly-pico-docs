@@ -5,6 +5,11 @@ const baseURL = process.env.NUXT_APP_BASE_URL || '/';
 export default defineNuxtConfig({
     app: {
         baseURL: baseURL,
+        head: {
+            link: [
+                { rel: 'icon', type: 'image/png', href: '/images/logo.png' }
+            ]
+        }
     },
     image: {
         provider: 'none'
