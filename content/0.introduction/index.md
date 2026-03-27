@@ -9,18 +9,16 @@ description: A delightful Firefly III companion web app for effortless transacti
 
 ## 💡 About
 
-For several years I've enjoyed tracking my expenses in proprietary mobile apps, but after getting into self-hosting, I wondered if there was an alternative that gives me the same functionality without
-losing control over my data.
+**Firefly-Pico** is a mobile-optimized, highly responsive web application designed as a **[Firefly III](https://github.com/firefly-iii/firefly-iii)** companion app.
 
-I came across **[Firefly III](https://github.com/firefly-iii/firefly-iii)** and instantly fell in love with its features. Since it offers a REST API, I decided to build a web app that feels mobile-native. I also wanted to ensure it passed the "
-Wife Approval Certification"—making the process as short as possible while still using tags and categories for those beautiful reports.
+It is built with a focus on speed and ease of use,
+allowing you to quickly log expenses, organize tags, and keep track of your finances
+on the go, all while maintaining completely private control over your own data.
 
-Several [bad] ideas later, I've come to this version: **A transaction assistant** 🎩.
+Apart from the sleek interface, it augments **Firefly III** with custom entity icons,
+support for sub-tags, and "templates" for auto-filling the transaction form.
 
-[//]: # (![Firefly Pico Logo]&#40;/video/assistant.gif&#41;{style="width: 300px; max-width: 300px;"})
-
-[//]: # (<video src="/video/assistant.mp4" autoplay loop muted playsinline controls="false" style="width: 300px; border-radius: 8px;" />)
-
+Last but not least, it also comes with a smart "assistant" which makes recording expenses a breeze 🎉:
 
 ![Assistant](/video/assistant.gif){style="width: 300px"}
 
