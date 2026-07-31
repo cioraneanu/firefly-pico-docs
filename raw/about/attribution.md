@@ -1,0 +1,14 @@
+# Attribution
+
+> Just like Firefly III this is licensed under the GNU Affero General Public License v3.
+
+Just like Firefly III this is licensed under the [GNU Affero General Public License v3](./LICENSE).
+
+- **Developed by:** Mihai Cioraneanu
+- **Stack:**  [Laravel](https://laravel.com/) and [Nuxt](https://nuxt.com/)
+- **Consuming** the [Firefly III](https://www.firefly-iii.org) REST API
+- **UI:** Custom theme based on Vant.
+- **Exchange rates** powered by [Exchange Rate API](https://www.exchangerate-api.com) and [FXRates API](https://fxratesapi.com)
+- **IconPacks:** [Tablr Icons](https://tabler.io/icons) · [Fluent UI System Icons](https://github.com/microsoft/fluentui) · [Circle Avatar Vectors by Laura Reen](https://www.svgrepo.com/author/Laura%20Reen)
+· [SVG Repo](https://www.svgrepo.com/) · [Freepik](https://www.freepik.com/)
+- **Illustrations**: [unDraw](https://undraw.co)

@@ -1,0 +1,243 @@
+# Installation
+
+## Docker (Recommended)
+
+If you already have **Firefly III** installed the fastest way to get started with **Firefly-Pico** is via docker-compose.
+
+```yaml
+version: '3.3'
+services:
+  firefly-pico:
+    image: cioraneanu/firefly-pico:dev
+    ports:
+      - "6977:80"
+    environment:
+      - FIREFLY_URL=https://firefly.domain.com  
+    volumes:
+      - /path/firefly-pico-data:/var/www/html/database/data
+```
+
+<note>
+
+Make sure the environment variable <u>
+
+FIREFLY_URL
+
+</u>
+
+ points to your **Firefly III** instance. This can be either IP + Port (ex. `http://192.168.1.99:8080`) or subdomain (ex. `https://firefly.domain.com`) if you use a reverse proxy like Nginx Proxy Manager.
+<br />
+
+
+
+- Set the volume to a persistent folder for the SQLite database.
+
+</note>
+
+- Make sure the environment variable **FIREFLY_URL** points to your **Firefly III** instance. This can be either IP + Port (ex. `http://192.168.1.99:8080`) or subdomain (ex. `https://firefly.domain.com`) if you use a reverse proxy like Nginx Proxy Manager.
+- Set the volume to a persistent folder for the SQLite database.
+
+### Other variants:
+
+If you don't yet have **Firefly III** installed and want both inside a single Docker-compose file:
+
+- [Pico + Firefly](https://github.com/cioraneanu/firefly-pico/blob/main/docker-compose.pico+firefly.yml)
+- [Pico + Firefly + Importer](https://github.com/cioraneanu/firefly-pico/blob/main/docker-compose.pico+firefly+importer.yml)
+  - Update `FIREFLY_URL` / `APP_URL` / `FIREFLY_III_URL` accordingly.
+  - Change `DB_PASSWORD` and `POSTGRES_PASSWORD` to something secure. **Make sure they match!**
+
+Further information on how to setup and configure **Firefly III** can be found on their officials docs: [HERE](https://docs.firefly-iii.org/how-to/firefly-iii/installation/docker/)
+
+### Environment Variables
+
+<table>
+<thead>
+  <tr>
+    <th>
+      Name
+    </th>
+    
+    <th>
+      Description
+    </th>
+  </tr>
+</thead>
+
+<tbody>
+  <tr>
+    <td>
+      <code>
+        NUXT_PUBLIC_QUERY_TIMEOUT
+      </code>
+    </td>
+    
+    <td>
+      Milliseconds Pico should wait before a request times out. (Default: 4000)
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      <code>
+        TZ
+      </code>
+    </td>
+    
+    <td>
+      Pico backend Timezone (ex. <code>
+        Europe/London
+      </code>
+      
+      )
+    </td>
+  </tr>
+</tbody>
+</table>
+
+### Optional Environment Variables
+
+These power the AI features of [Ramble](/features/ramble). Leave them unset and Pico works exactly as before.
+
+<table>
+<thead>
+  <tr>
+    <th>
+      Name
+    </th>
+    
+    <th>
+      Description
+    </th>
+  </tr>
+</thead>
+
+<tbody>
+  <tr>
+    <td>
+      <code>
+        ASSISTANT_LLM_ENDPOINT
+      </code>
+    </td>
+    
+    <td>
+      OpenAI-compatible chat completions endpoint used by <a href="/features/ramble">
+        Ramble
+      </a>
+      
+      . (Default: <code>
+        https://api.openai.com/v1/chat/completions
+      </code>
+      
+      )
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      <code>
+        ASSISTANT_LLM_MODEL
+      </code>
+    </td>
+    
+    <td>
+      LLM model name. (Default: <code>
+        gpt-4o-mini
+      </code>
+      
+      )
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      <code>
+        ASSISTANT_LLM_API_KEY
+      </code>
+    </td>
+    
+    <td>
+      API key for the LLM endpoint.
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      <code>
+        ASSISTANT_LLM_CONTEXT
+      </code>
+    </td>
+    
+    <td>
+      Extra instructions appended to every Ramble interpretation.
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      <code>
+        ASSISTANT_TRANSCRIPTION_ENDPOINT
+      </code>
+    </td>
+    
+    <td>
+      OpenAI-compatible audio transcription endpoint for voice rambles. (Default: <code>
+        https://api.openai.com/v1/audio/transcriptions
+      </code>
+      
+      )
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      <code>
+        ASSISTANT_TRANSCRIPTION_MODEL
+      </code>
+    </td>
+    
+    <td>
+      Transcription model name. (Default: <code>
+        gpt-4o-mini-transcribe
+      </code>
+      
+      )
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      <code>
+        ASSISTANT_TRANSCRIPTION_API_KEY
+      </code>
+    </td>
+    
+    <td>
+      API key for the transcription endpoint.
+    </td>
+  </tr>
+</tbody>
+</table>
+
+### Docker image flavors
+
+- `:latest` - Stable, less frequent updates
+- `:dev` - Latest features, more updates, still stable.
+
+---
+
+## Post-install Configuration
+
+1. **Generate Firefly III Auth Token:** Open up **Firefly III** and finish the onboarding process if this is your first usage. **** Go to `Options` -> `Profile` -> `OAuth` -> `Create New Personal Access Token`.
+2. **Connect Pico:** Open **Firefly-Pico**, **** go to `Settings` -> `Setup` and paste the token.
+
+<note>
+
+In most scenarios you don't need to change the <u>
+
+Pico Backend URL
+
+</u>
+
+ field!!! This is helpful only if deploy the **Firefly-Pico** backend somewhere separate from the frontend.
+
+</note>
