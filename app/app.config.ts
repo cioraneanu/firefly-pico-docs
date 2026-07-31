@@ -1,10 +1,9 @@
 export default defineAppConfig({
-    docus: {
-        locale: 'en', // Set your single-language locale
+    header: {
+        title: 'Firefly-Pico',
     },
     seo: {
-        title: 'My Docs',
-        description: 'My awesome documentation',
+        title: 'Firefly-Pico',
+        description: 'A delightful Firefly III companion web app for effortless transaction tracking.',
     },
-    // ... other configurations
 })

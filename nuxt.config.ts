@@ -7,7 +7,7 @@ export default defineNuxtConfig({
         baseURL: baseURL,
         head: {
             link: [
-                { rel: 'icon', type: 'image/png', href: '/images/logo.png' }
+                { rel: 'icon', type: 'image/png', href: `${baseURL}images/logo.png` }
             ]
         }
     },
@@ -22,7 +22,9 @@ export default defineNuxtConfig({
     },
     // extends: '@nuxt-themes/docus',
     routeRules: {
-        '/': {redirect: baseURL === '/' ? '/introduction' : baseURL + 'introduction'}
+        // Keep this relative so it resolves under app.baseURL without embedding
+        // the GitHub Pages path twice during client-side navigation.
+        '/': {redirect: 'introduction'}
     },
 
     site: {
