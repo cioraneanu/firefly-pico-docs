@@ -19,6 +19,9 @@
     <loc>/features/profiles</loc>
   </url>
   <url>
+    <loc>/features/custom-icons</loc>
+  </url>
+  <url>
     <loc>/ramble/configuration</loc>
   </url>
   <url>
