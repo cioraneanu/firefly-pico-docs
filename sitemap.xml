@@ -10,6 +10,9 @@
     <loc>/installation/manual</loc>
   </url>
   <url>
+    <loc>/app-guide/usage</loc>
+  </url>
+  <url>
     <loc>/features/templates</loc>
   </url>
   <url>
@@ -32,9 +35,6 @@
   </url>
   <url>
     <loc>/ramble</loc>
-  </url>
-  <url>
-    <loc>/guide/usage</loc>
   </url>
   <url>
     <loc>/contribute</loc>
