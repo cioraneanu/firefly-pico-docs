@@ -7,7 +7,10 @@ export default defineNuxtConfig({
         baseURL: baseURL,
         head: {
             link: [
-                { rel: 'icon', type: 'image/png', href: `${baseURL}images/logo.png` }
+                { rel: 'icon', type: 'image/svg+xml', href: `${baseURL}images/logo.svg` },
+                { rel: 'icon', type: 'image/png', sizes: '32x32', href: `${baseURL}images/favicon-32x32.png` },
+                { rel: 'icon', type: 'image/png', sizes: '16x16', href: `${baseURL}images/favicon-16x16.png` },
+                { rel: 'apple-touch-icon', sizes: '180x180', href: `${baseURL}images/apple-touch-icon.png` }
             ]
         }
     },
