@@ -13,7 +13,7 @@ You then just describe the transaction.
 - [Text shortcut](https://github.com/cioraneanu/firefly-pico/raw/main/docs/siri-shortcuts/pico-text-template-signed.shortcut): Apple converts your speech to text before sending it. This only requires Ramble's language model configuration.
 - [Voice shortcut](https://github.com/cioraneanu/firefly-pico/raw/main/docs/siri-shortcuts/pico-voice-template-signed.shortcut): the recording is uploaded directly. This is faster to capture and can support languages that Apple dictation does not, but it requires Pico's audio transcription service.
 
-These correspond to the two modes described in the [Ramble API reference](/features/ramble/api).
+These correspond to the two modes described in the [Ramble API reference](/ramble/api).
 
 ## Install a shortcut
 
@@ -40,3 +40,9 @@ You can assign the shortcut to:
 - an Apple Watch complication.
 
 Older iPhones without an Action button can use any of the other launch methods.
+
+<tip>
+
+The repository also contains a native iOS app (the `ios/` folder) that wraps Pico and records voice rambles natively from the Action button, Control Center or Lock Screen. You need to build it yourself with Xcode, see [ios/README.md](https://github.com/cioraneanu/firefly-pico/blob/main/ios/README.md).
+
+</tip>

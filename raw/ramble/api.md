@@ -149,4 +149,4 @@ A successful request returns the saved ramble:
 }
 ```
 
-The endpoint saves a ramble; it does not immediately create or interpret a transaction. Open Ramble in Pico, select **Load saved**, then review and create the resulting drafts.
+The endpoint saves a ramble; it does not immediately create or interpret a transaction. Open Ramble in Pico, where it shows up under **Saved rambles**, then interpret it, review and create the resulting drafts.

@@ -13,7 +13,7 @@ We welcome contributions! Please follow these general rules to keep the process 
 
 ## Backend Development
 
-1. **Install:** PHP >= 8.1 and [Composer](https://getcomposer.org).
+1. **Install:** PHP >= 8.2 and [Composer](https://getcomposer.org).
 2. **Run:**```bash
 cd back
 composer install
@@ -25,7 +25,7 @@ php artisan serve
 
 1. **Install:** [Node.js](https://nodejs.org/en) (LTS recommended).
 2. **Have a backend avaiable to connect to:**
-  - Either use your deployed  [Docker instance](/getting-started/installation).
+  - Either use your deployed  [Docker instance](/installation/docker).
   - Or dev running backend like [above](#backend-development).
 3. **Run:**```bash
 cd front

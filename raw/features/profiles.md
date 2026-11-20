@@ -3,10 +3,11 @@
 > Easily switch between your app settings
 
 All your settings can be grouped in a **profile**. You can have multiple **profiles** and
-easily switch between them from the floating right-side button on mobile, or left sidebar on desktop.
+easily switch between them from the floating right-side button on mobile, or the profile menu at the bottom of the left sidebar on desktop.
+On mobile you can drag the floating button up or down, or swipe it sideways to tuck it into the edge (tap it to bring it back).
 
-Any changes you make are automatically saved in the current active profile and all profiles are persisted
-in the DB linked to your access token.
+Any changes you make are automatically saved in the current active profile. With `Sync settings across devices via token`
+enabled (in `Settings -> Setup`) all profiles are persisted in the DB linked to your access token, so they follow you on every device.
 
 Profiles are a great way to switch between different configs:
 

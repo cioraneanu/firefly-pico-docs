@@ -1,0 +1,22 @@
+# Templates
+
+> Auto-fill the transaction form in one go.
+
+**Templates** are an easy way to auto-fill all or some of the fields in the transaction form.
+These are useful for:
+
+- transactions that don't repeat on fixed interval (ex. 1 massage)
+- transactions that vary in price (ex. electricity bill).
+
+<tip>
+
+You can use a template by typing part of its name inside the assistant field.
+It also supports partial or fuzzy searching.
+
+</tip>
+
+<tip>
+
+Each template can have multiple names (the **Extra names** field). This way you and your partner can reference the same template via different names in the assistant.
+
+</tip>

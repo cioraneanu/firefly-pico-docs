@@ -19,7 +19,7 @@ on the go, all while maintaining completely private control over your own data.
 Apart from the sleek interface, it augments **Firefly III** with custom entity icons,
 support for sub-tags, and "templates" for auto-filling the transaction form.
 
-Last but not least, it also comes with a smart "assistant" which makes recording expenses a breeze 🎉:
+Last but not least, it also comes with a smart "assistant" which makes recording expenses a breeze 🎉 (no LLM just fast pure type matching):
 
 ![Assistant](/video/assistant.gif)
 
@@ -71,7 +71,10 @@ Last but not least, it also comes with a smart "assistant" which makes recording
 
 - ✅ Beautiful clean minimalistic UI 🔥 subtle animations and dark-theme support 🌛
 - ✅ Optimized for mobile, with PWA support for a native feel 📱
+- ✅ Optimized for desktop to take advantage of the extra space 🖥️
 - ✅ The Assistant makes recording an expense feel like magic ✨
+- ✅ Configure a LLM of your choice and use natural language to track your expenses. Type it or speak it, your choice ([Ramble](/ramble))
+- ✅ Mark transactions as "Todo" for later examination and see them in your "TODO Inbox" 📥
 - ✅ Expand Firefly data with icons for all resources 🎨
 - ✅ Expand Firefly "tags" with the option of subtags for better granularity
 - ✅ Add "templates" to make auto-completing fields a breeze 📢

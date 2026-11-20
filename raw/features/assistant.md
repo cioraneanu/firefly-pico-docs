@@ -7,7 +7,7 @@ The Assistant allows you to easily turn words into a transaction. You can even u
 ## Format
 
 The basic format is:
-`[Tag / Category / Template] [Amount?] [Description?] [Todo?]`
+`[Tag / Category / Template] [Amount?] [Description?] [±Nd?] [Todo?]`
 
 ### Parts
 
@@ -15,7 +15,18 @@ The basic format is:
 and **templates** (e.g., `elct` => `electricity`).
 2. **Amount:** (optional) Supports mathematical expressions. Numbers separated by a space are automatically added up.
 3. **Description:** (optional). If provided overwrites the default value (tag name / template description).
-4. **Todo:** (optional) Appending a custom string (default `!!`) marks the transaction as a "Todo". This string is configurable in Settings.
+4. **Date:** (optional) `-1d`, `-2d`, `+3d` etc. moves the date N days from today. Without it the date is "now".
+5. **Todo:** (optional) Appending a custom string (default `!!`) at the end adds your "todo" **tag** to the transaction. This string is configurable in `Settings -> Assistant`.
+
+As you type, the recognized parts show up as chips under the field (template, tag, amount, description, date, todo). Tap the `x` on a chip to remove that part.
+
+### Quick actions
+
+Next to the field you'll find the **Todo**, **Yesterday** and **2 days ago** chips. They add (or remove) the todo marker and the `-1d` / `-2d` date parts for you.
+
+### Currency
+
+The currency picker next to the field lets you write the amount in a foreign currency. Pico converts it to the account's currency using the exchange rates. The default currency can be set in `Settings -> Assistant`.
 
 ## Examples
 
@@ -89,6 +100,18 @@ Assuming you have:
   <tr>
     <td>
       <code>
+        elc 25 -1d
+      </code>
+    </td>
+    
+    <td>
+      Tag: Electricity, Amount: 25, Date: yesterday
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      <code>
         swim
       </code>
     </td>
@@ -102,6 +125,6 @@ Assuming you have:
 
 <tip>
 
-Want to go one step further and just *talk* at your budget app? Check out [Ramble](/features/ramble) — the Assistant's AI-powered big brother.
+Want to go one step further and just *talk* at your budget app? Check out [Ramble](/ramble) — the Assistant's AI-powered big brother.
 
 </tip>

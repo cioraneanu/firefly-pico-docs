@@ -18,17 +18,28 @@ Nothing is saved immediately. You can review, edit, or remove every draft before
 ## Choose how you want to use it
 
 - **Inside Pico:** open Ramble, type or dictate a message, select **Interpret**, review the result, and create the transactions.
+
+  - On mobile, tap the microphone next to the assistant field (or the saved rambles counter on the floating side button). Write a **New ramble**, add it to your **Saved rambles**, then tap **Interpret**.
+  - On desktop, open Ramble from the sidebar. A 3-step wizard guides you: **Capture** (record or pick saved rambles), **Check drafts** (edit before creating) and **Done**.
 - **Capture now, review later:** send text or an audio recording to the Ramble API from an automation such as an iOS Shortcut. Pico keeps it until you are ready to review it.
 
 ## How Ramble handles your message
 
 1. Pico sends your message and relevant Firefly III context to the language model you configured.
 2. The model interprets the transactions matching it to your setup(accounts,tags, categories etc)
-3. You review the drafts and choose which transactions to create.
+3. You review the drafts and choose which transactions to create. Once created, the interpreted rambles are removed from your saved list.
+
+Several amounts for the same thing become a single transaction with the total (ex. `groceries 23 11 44` -> one transaction of 78). Separate subjects become separate transactions.
 
 <note>
 
 Ramble sends financial context to the language model endpoint you configure. You can use a hosted provider or an OpenAI-compatible service on your own network.
+
+</note>
+
+<note>
+
+Ramble is not available in demo mode, since there is no server to talk to.
 
 </note>
 
